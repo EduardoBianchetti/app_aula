@@ -26,7 +26,7 @@ class SobrePage extends StatelessWidget {
               child: const Text('Mais Info...'),
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => MaisInfoPage()),
+                  MaterialPageRoute(builder: (context) => const MaisInfoPage()),
                 );
               },
             ),
