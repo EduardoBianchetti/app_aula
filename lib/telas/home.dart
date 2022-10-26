@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.add),
+              leading: const Icon(Icons.add_business_outlined),
               title: const Text('Contador'),
               onTap: () {
                 Navigator.pop(context);
@@ -39,6 +39,14 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/sobre');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Dias Vividos'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/diasVividos');
               },
             ),
           ],

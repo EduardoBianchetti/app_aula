@@ -1,4 +1,5 @@
 import 'package:app_aula/telas/contador.dart';
+import 'package:app_aula/telas/dias_vividos.dart';
 import 'package:app_aula/telas/home.dart';
 import 'package:app_aula/telas/sobre.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/contador': (context) => const ContadorPage(title: "Contador"),
         '/sobre': (context) => const SobrePage(),
+        '/diasVividos': (context) =>
+            const DiasVividosPage(title: "Dias Vividos"),
       },
     );
   }

@@ -27,7 +27,7 @@ class _ContadorPageState extends State<ContadorPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Você clicou no botão este número de vezes:',
             ),
             Text(
               '$_counter',
@@ -38,7 +38,7 @@ class _ContadorPageState extends State<ContadorPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'Incrementar',
         child: const Icon(Icons.add),
       ),
     );
