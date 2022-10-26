@@ -1,4 +1,6 @@
+import 'package:app_aula/util/dialogos.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class DiasVividosPage extends StatefulWidget {
   const DiasVividosPage({super.key, required this.title});
@@ -15,13 +17,24 @@ class _DiasVividosPageState extends State<DiasVividosPage> {
   void _calcular() {
     setState(() {
       _diasVividos = _idade * 365;
+      entries.add('$_nome tem $_idade anos e viveu ~ $_diasVividos dias.');
     });
-    entries.add('$_nome tem $_idade anos e viveu ~ $_diasVividos dias.');
+    Dialogos.showAlertDialog(context, 'Calculou dias vividos para $_nome');
   }
 
   final _formKey = GlobalKey<FormState>();
   final List<String> entries = <String>[];
-  final List<int> colorCodes = <int>[600, 500];
+  final List<int> colorCodes = <int>[600, 100];
+
+  void _limpar() {
+    setState(() {
+      entries.clear();
+    });
+    GFToast.showToast(
+      'Limpou os dados.',
+      context,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +93,20 @@ class _DiasVividosPageState extends State<DiasVividosPage> {
                 },
                 child: const Text('Calcular'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Dialogos.showConfirmDialog(context, 'Confirma?', _limpar);
+                },
+                child: const Text('Limpar'),
+              ),
               Text('$_nome, você viveu aproximadamente'),
               Text(
                 '$_diasVividos dias.',
                 style: Theme.of(context).textTheme.displayMedium,
               ),
+              const Text('Dias que viveu +-'),
               TextFormField(
+                keyboardType: TextInputType.none,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Resultado',
