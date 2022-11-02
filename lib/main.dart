@@ -1,6 +1,9 @@
 import 'package:app_aula/telas/contador.dart';
 import 'package:app_aula/telas/dias_vividos.dart';
+import 'package:app_aula/telas/dias_vividos_oo.dart';
+import 'package:app_aula/telas/exemplo_listView.dart';
 import 'package:app_aula/telas/home.dart';
+import 'package:app_aula/telas/imc.dart';
 import 'package:app_aula/telas/sobre.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +28,10 @@ class MyApp extends StatelessWidget {
         '/sobre': (context) => const SobrePage(),
         '/diasVividos': (context) =>
             const DiasVividosPage(title: "Dias Vividos"),
+        '/diasVividosOo': (context) =>
+            const DiasVividosOoPage(title: "Dias Vividos Objeto"),
+        '/listView': (context) => const ListViewPage(title: "Listagem Exemplo"),
+        '/imc': (context) => const ImcPage(title: "Cálculo de IMC"),
       },
     );
   }
