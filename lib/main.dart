@@ -1,3 +1,4 @@
+import 'package:app_aula/sqlite/contatos_list_page.dart';
 import 'package:app_aula/telas/contador.dart';
 import 'package:app_aula/telas/dias_vividos.dart';
 import 'package:app_aula/telas/dias_vividos_oo.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
             const DiasVividosOoPage(title: "Dias Vividos Objeto"),
         '/listView': (context) => const ListViewPage(title: "Listagem Exemplo"),
         '/imc': (context) => const ImcPage(title: "Cálculo de IMC"),
+        '/contato': (context) => const ContatosListPage(title: "Contatos"),
       },
     );
   }

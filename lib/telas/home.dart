@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.person_pin_sharp),
+              leading: const Icon(Icons.list_rounded),
               title: const Text('Exemplo de ListView'),
               onTap: () {
                 Navigator.pop(context);
@@ -66,11 +66,19 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.person_pin_sharp),
+              leading: const Icon(Icons.personal_injury),
               title: const Text('Cálculo de IMC'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/imc');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.contact_phone),
+              title: const Text('Contatos'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/contato');
               },
             ),
           ],
